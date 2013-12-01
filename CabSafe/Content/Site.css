@@ -1,0 +1,94 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+html {
+    height: 100%;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    /*padding-left: 15px;
+    padding-right: 15px;*/
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+#trackerBody {
+    background-image: -webkit-gradient( linear, left top, left top, color-stop(0, #7376D9), color-stop(0.83, #969AFF) );
+    background-image: -o-linear-gradient(left top, #7376D9 0%, #969AFF 83%);
+    background-image: -moz-linear-gradient(left top, #7376D9 0%, #969AFF 83%);
+    background-image: -webkit-linear-gradient(left top, #7376D9 0%, #969AFF 83%);
+    background-image: -ms-linear-gradient(left top, #7376D9 0%, #969AFF 83%);
+    background-image: linear-gradient(to left top, #7376D9 0%, #969AFF 83%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.reference-wrapper {
+    padding: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #f7f7f7;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #e0a415;
+}
+
+    .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+        color: #dcbb1f;
+        background-color: transparent;
+    }
+
+.pic-wrapper {
+    width: 100%;
+    padding: 15px;
+    /*background-color: #e0a415;*/
+    /* IE10 Consumer Preview */
+    background-image: -ms-radial-gradient(center bottom, circle farthest-corner, #FFFFFF -200%, #E0A415 100%);
+    /* Mozilla Firefox */
+    background-image: -moz-radial-gradient(center bottom, circle farthest-corner, #FFFFFF -200%, #E0A415 100%);
+    /* Opera */
+    background-image: -o-radial-gradient(center bottom, circle farthest-corner, #FFFFFF -200%, #E0A415 100%);
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(radial, center bottom, 0, center bottom, NaN, color-stop(-2, #FFFFFF), color-stop(1, #E0A415));
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-radial-gradient(center bottom, circle farthest-corner, #FFFFFF -200%, #E0A415 100%);
+    /* W3C Markup, IE10 Release Preview */
+    background-image: radial-gradient(circle farthest-corner at center bottom, #FFFFFF -200%, #E0A415 100%);
+}

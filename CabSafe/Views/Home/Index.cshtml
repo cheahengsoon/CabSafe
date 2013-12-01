@@ -1,0 +1,125 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="pic-wrapper">
+    <div class="container">
+        <h1 style="color:white;">Be part of the Community!<small style="color:grey"> Share your experience!</small></h1>
+        <div id="links">
+            @for (int i = 1; i < 15; i++)
+            {
+                <a href="Images/taxi-drivers/@i-taxi.jpg" title="Taxi Driver @i" data-gallery style="margin-right:-5px">
+                    <img src="Images/taxi-drivers-thumb/@i-taxi.jpg" alt="@i">
+                </a>
+            }
+            @for (int i = 1; i < 15; i++)
+            {
+                <a href="Images/taxi-drivers/@i-taxi.jpg" title="Taxi Driver @i" data-gallery style="margin-right:-5px">
+                    <img src="Images/taxi-drivers-thumb/@i-taxi.jpg" alt="@i">
+                </a>
+            }
+            @for (int i = 1; i < 15; i++)
+            {
+                <a href="Images/taxi-drivers/@i-taxi.jpg" title="Taxi Driver @i" data-gallery style="margin-right:-5px">
+                    <img src="Images/taxi-drivers-thumb/@i-taxi.jpg" alt="@i">
+                </a>
+            }
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <h1 style="font-size: 100px; color: #E0A415; "><span class="glyphicon glyphicon-phone"></span></h1>
+            <h2>Install our app</h2>
+            <p>
+                Fast, Reliable, and Consistent. Let us help you feel safer with every taxi you ride through our App
+                CabSafe. Our services are always free!
+            </p>
+            <p><a class="btn btn-default" href="#">Download &raquo;</a></p>
+        </div>
+        <div class="col-md-4 text-center">
+            <h1 style="font-size:100px; color:black;"><span class="glyphicon glyphicon-road"></span></h1>
+            <h2>Live Tracking</h2>
+            <p>Monitor your loved ones through our Web App. Know when and where exactly are they when even they're inside a Cab.</p>
+            <p>@Html.ActionLink("Go", "Index", "Tracker", null, new { @class = "btn btn-default" })</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <h1 style="font-size: 100px; color: #E0A415"><span class="glyphicon glyphicon-cloud-upload"></span></h1>
+            <h2>Upload Your Experience</h2>
+            <p>
+                No matter how bad the experience of riding a cab for some others are, there are always those
+                drivers that would seem to exceed your expectations. So Join our community by uploading your picture and
+                story detailing your <em>great</em> experiences.
+            </p>
+            <p>
+                <button class="btn btn-default" data-toggle="modal" data-target="#fileUpload">
+                    Upload
+                </button>
+            </p>
+        </div>
+    </div>
+</div>
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*modal input pichur*@
+<div class="modal fade" id="fileUpload">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Upload your experience</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control" />
+
+                            <label>Choose Pictures</label>
+                            <input type="file" name="ChooseFile" class="form-control" />
+
+                            <label>Additional Message</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div >
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

@@ -1,0 +1,58 @@
+﻿@model CabSafe.Models.TrackingReference
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TrackingReference</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SenderName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SenderName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlateNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlateNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DriverName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DriverName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OtherMessage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtherMessage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.referenceCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.referenceCode)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.trackID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
